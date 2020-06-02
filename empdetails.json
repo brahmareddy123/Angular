@@ -1,0 +1,29 @@
+{
+    "employe":[
+        {
+            "id" : 1 ,
+            "name" : "Brahma",
+            "catogary" : "IT",
+            "sal" : 20000
+        },
+        {
+            "id" : 2 ,
+            "name" : "Raja",
+            "catogary" : "Finance",
+            "sal" : 35000
+        },
+        {
+            "id" : 3 ,
+            "name" : "Nagi",
+            "catogary" : "Finance",
+            "sal" : 35000
+        },
+        {
+            "id" : 4 ,
+            "name" : "Papi",
+            "catogary" : "IT",
+            "sal" :50000
+        }
+    ]
+
+}

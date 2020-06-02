@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script  src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <title>Ajax Request</title>
+</head>
+<body>
+    <div id="showDetails"></div>
+    <script>
+        // fetch('http://localhost:3001/students')
+        // .then(res =>{
+        //     console.log(res.json);
+        // })
+        //this is by javascript request and response
+        // fetch('http://localhost:3001/students')
+        //     .then(res =>{
+        //         return res.json();
+        //     }).then (val =>{
+        //        document.getElementById("showDetails").innerHTML= val.json;
+        //         console.table(val);
+        //     });
+
+        //this is by ajax request and response
+        // var xhttp = new XMLHttpRequest();
+        // xhttp.onreadystatechange = function(){
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         const val = JSON.parse(this.responseText);
+        //         console.table(val);
+        //     }
+        // };
+        // xhttp.open("get","http://localhost:3001/students",true);
+        // xhttp.send();
+        // this is by jquery
+        
+        // jQuery(document).ready(function(){
+        //     jQuery.get('http://localhost:3001/students', function(res){
+        //         console.table(res);
+        //     });
+        // });
+       
+        $(document).ready(function() {
+            console.log('DOM ready');
+            $.ajax({
+                url: 'http://localhost:3000 /students',
+                success: function(res) {
+                    console.log(res);
+                    showUserDetails(res)
+                }
+            });
+        })
+        
+
+        function showUserDetails(jsonObject) {
+            let output = "<table>";
+            let header = "<tr>";
+            for (const key in jsonObject[0]) {
+                if (jsonObject[0].hasOwnProperty(key)) {
+                    // const thname = jsonObject[0][key];
+                    console.log(key);
+                    header += "<th>" + key + "</th>";
+                }
+            }
+            header += "</tr>";
+            output += header;
+            let body = '';
+            jsonObject.forEach(element => {
+                body += "<tr>";
+                for (const key in element) {
+                    if (element.hasOwnProperty(key)) {
+                        // const thname = element[key];
+                        console.log(element[key]);
+                        body += "<td>" + element[key] + "</td>";
+                    }
+                }
+                body += "</tr>";
+            });
+            output += body;
+
+
+
+            output += "</table>";
+            
+            document.getElementById('showDetails').innerHTML = output;
+        }
+   </script>
+</body>
+</html>

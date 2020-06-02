@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript Pattern program</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="strings.js"></script>
+
+</head>
+
+<body>
+    <h1>this is normal pattern</h1>
+    <script>
+        
+        function myfun() {
+           
+            for (let i=1; i<=4; i++) {
+                let str = "";
+                for (let j = 1; j <=4; j++) {
+                    
+                    //console.log(str);
+                    //document.write("*")
+                    
+                    str +="\t*";
+                }
+                console.log("\n");
+              console.log(str);
+             // document.write("</br>");
+            }
+        }
+        myfun();
+        function myfun1() {
+
+            for (i = 1; i <= 4; i++) {
+                var str = " ";
+                for (j = 1; j <= i; j++) {
+                    // document.write(str)
+                    str += "@";
+                }
+                console.log("\n");
+                console.log(str)
+               // document.write("</br>");
+            }
+        }
+        myfun1();
+        function myfun2() {
+            for (i = 1; i <= 4; i++) {
+                let str = ""
+                for (j = 4; j>= i; j--) {
+                    str +="\t&";
+                    //console.log("&");
+                    //console.log("\n");
+                   
+                }
+                console.log(str);
+            }
+        } 
+        myfun2();
+        function fun(...input) {
+            let sum = 0;
+            for (let i of input) {
+                sum += i;
+            }
+            return sum;
+        }
+        console.log(fun(1, 2)); //3
+        console.log(fun(1, 2, 3)); //6
+        console.log(fun(1, 2, 3, 4, 5)); //15
+    </script>
+</body>
+
+</html>

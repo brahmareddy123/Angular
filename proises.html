@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+    <h1>Hello Promises</h1>
+    <script>
+        var promise = new Promise(function (resolve, reject) {
+            const x = "brahma";
+            const y = "Brahma";
+            if (x === y.toLocaleLowerCase()) {
+                resolve("success ");
+            } else {
+                reject("rejected ");
+            }
+        });
+        // promise consuming by using both .then and .cath methods
+
+        promise.then(function (successmessage) {
+            console.log(successmessage);
+        }).catch(function (rejectedmessage) {
+            console.log(rejectedmessage);
+        });
+
+
+        // promise consuming by using .then only with two functions
+
+        // promise.then(function (successmessage) {
+        //     console.log(successmessage);
+        // },function(rejectedmessage){
+        //     console.log(rejectedmessage);
+
+        // });
+
+
+        let hello = new Promise(function (myresolve, myreject) {
+            let k = "Brahma";
+            let j = "Brahma";
+            if(k === j){
+                console.log("success hello");
+                
+            }
+            else{
+                console.log("fail hello")
+            }
+        });
+        hello.then(function(){
+            myresolve();
+        }).catch(function(){
+            myreject();
+        });
+debugger;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/await</title>
+</head>
+
+<body>
+    <h1>Hello Asinc / await</h1>
+
+
+    <script>
+        // async function resolve using .then 
+
+
+        // let hello = async function () {
+        //     let data = "brahma";
+        //     return data;
+        // }
+        // hello().then(function (val) {
+        //     console.log(val);
+        // });
+
+
+        // async function resolve using .then  using arrow function
+
+        // let hello = async () => {
+        //     let data = "hello Brahma";
+        //     return data;
+        // }
+        // hello().then(val => console.log(val));
+
+
+        // async function using await using arrow function
+
+
+        // let hello = async () => {
+        //     let data = await "Hello Await data" ;
+        //   console.log(data);
+        // } 
+        // console.log(1);
+        // hello();
+        // console.log(2);
+
+
+        // async function using await using normal function
+
+        let hello = async function(){
+            let data = await "hello Brahma";
+            console.log(data);
+        }
+        console.log(1);
+        hello();
+        console.log(2);
+    </script>
+</body>
+
+</html>

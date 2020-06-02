@@ -1,0 +1,26 @@
+{
+    "students":[
+        {
+            "id":1,
+            "name":"Brahma",
+            "Qualification":"B.tech",
+            "Year":2013,
+            "college":"UCET"
+        },
+        {
+            "id":2,
+            "name":"Raghava",
+            "Qualification":"B.tech",
+            "Year":2012,
+            "college":"UCET"
+        },
+        {
+            "id":3,
+            "name":"Ravi",
+            "Qualification":"B.tech",
+            "Year":2012,
+            "college":"UCET"
+        }
+        
+    ]
+}
